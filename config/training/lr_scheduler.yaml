@@ -1,0 +1,4 @@
+# @package training.lr_scheduler
+base_lr: 1e-4
+lr_warmup_steps: 2000
+lr_min_ratio: 1

@@ -1,0 +1,5 @@
+# @package training.act
+unroll_steps_train: 1
+unroll_steps_eval: 16
+learn_encoder: true
+learn_init_memory: true

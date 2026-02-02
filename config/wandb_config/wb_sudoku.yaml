@@ -1,0 +1,11 @@
+enabled: true          # turn W&B on/off globally
+mode: online           # online | offline | disabled
+entity: TRM_cs_problems  # e.g., "myteam"
+project_name: TRM_sudoku_tests
+run_name: null         # usually overridden by Hydra timestamp interpolation
+
+resume: never           # auto | never | must
+tags: []               # list of custom tags
+
+log_code: true
+log_git: true

@@ -1,0 +1,3 @@
+# @package training.ema
+use_ema: true
+ema_rate: 0.999

@@ -1,0 +1,14 @@
+# ============================================================
+# TRM Architecture Config (NEW ACTModelProtocol)
+# ============================================================
+
+name: TRM
+
+model_cls_path: user_module.models.trm.TRM
+
+output_cls_path: user_module.models.trm.TRMOutputs
+halting_controller_cls_path: user_module.models.halting_controller.HaltingController
+criterion_cls_path: user_module.models.criterion.TRMCriterion
+metrics_fn_path: user_module.models.metrics.compute_trm_metrics
+
+config_file: config/arch/trm_config.yaml

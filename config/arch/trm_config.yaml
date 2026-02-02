@@ -1,0 +1,24 @@
+# config/arch/trm_base.yaml
+
+model_config:
+  # Original TRM architecture hyperparameters
+  H_cycles: 3
+  L_cycles: 6
+  H_layers: 0
+  L_layers: 2
+
+  hidden_size: 512
+  num_heads: 8
+  expansion: 4
+
+  pos_encodings: rope # To remove
+  forward_dtype: bfloat16
+  mlp_t: False
+
+halting_config:
+  exploration_prob: 0.1
+  max_steps: 16
+  exploration_enabled: true  # always include or explicitly disable
+
+criterion_config:
+  loss_type: stablemax_cross_entropy

@@ -1,0 +1,81 @@
+# configs/config.yaml
+
+defaults:
+  - _self_
+  
+  # model
+  - arch: trm
+
+  # dataset
+  - dataset: sorting
+
+  # training components
+  - training/optimizer
+  - training/lr_scheduler
+  - training/ema
+  - training/act
+
+  # logging
+  - wandb_config: wb_sort
+
+
+# ================================================================
+# GLOBAL TRAINING CONFIG
+# ================================================================
+
+batch_size: 768
+epochs: 2000
+
+max_num_step_per_train_epoch: 16000
+max_num_step_per_eval_epoch: 1600
+
+# ================================================================
+# Compiling otions
+# null maps to Python None, i.e. default torch behavior.
+# ================================================================
+
+torch_compile:
+  enabled: true # Compile or not
+
+  default: # Default argument sent to compile function
+    enabled: true
+    fullgraph: true
+    
+  # Compile options override for specific scenario (unroll_step, unroll_eval, encode, step_encoded, step_once)
+  # Eval loop takes too much time to compile if unroll step is high
+  unroll_eval: 
+    enabled: false
+    
+# ================================================================
+# SAVE/LOAD OPTIONS
+# ================================================================
+checkpoint:
+  path: checkpoints/sorting
+  auto_resume: true
+
+  save:
+    train: true
+    model: false
+    ema: true
+
+  load:
+    path: null              # explicit path overrides auto_resume
+
+  override:
+    model_path: null        # if set → override model
+    ema_path: null          # if set → override ema
+    reset_optimizer: true   # Reset optimizer if override
+    reset_step: true        # Reset step counter if override
+
+
+
+# ================================================================
+# MISC
+# ================================================================
+
+seed: 666
+
+eval_interval: 1
+eval_start_epoch: 0
+
+
