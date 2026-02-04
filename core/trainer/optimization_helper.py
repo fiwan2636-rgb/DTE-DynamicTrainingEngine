@@ -22,7 +22,6 @@ class OptimizationHelper:
         self,
         optimizer_cfg: dict,
         scheduler_cfg: dict,
-        # dist_ctx: DistContext,
         grad_clip: float | None = None,
     ):
         self.optimizer_cfg = optimizer_cfg
@@ -52,21 +51,18 @@ class OptimizationHelper:
             
         if name in {"adam_atan2", "adamatan2", "adam-atan2"}:
             
-            from adam_atan2 import AdamATan2
-            
-            betas = tuple(cfg.get("betas", (0.9, 0.95)))
-            wd = cfg.get("weight_decay", 0.0)
-
-            return AdamATan2(
-                model.parameters(),
-                lr=1.0,  # scheduler-controlled (1.0 is placeholder to avoid assert error)
-                betas=betas,
-                weight_decay=wd,
+            warnings.warn(
+                "Optimizer 'adam_atan2' is DEPRECATED and will be removed. "
+                "It is kept only for backward compatibility and is implemented "
+                "via a compatibility shim (adam-atan2-pytorch). "
+                "Switch to adam_atan2_pytorch or AdamW unless you need this baseline.",
+                category=DeprecationWarning,
+                stacklevel=2,
             )
         
         if name in {"adam_atan2_pytorch", "adamatan2_pytorch", "adam-atan2_pytorch"}:
             
-            from adam_atan2 import AdamAtan2
+            from adam_atan2_pytorch import AdamAtan2
             
             betas = tuple(cfg.get("betas", (0.9, 0.95)))
             wd = cfg.get("weight_decay", 0.0)
@@ -106,4 +102,3 @@ class OptimizationHelper:
         self.optimizer.zero_grad(set_to_none=True)
 
         return lr
-
