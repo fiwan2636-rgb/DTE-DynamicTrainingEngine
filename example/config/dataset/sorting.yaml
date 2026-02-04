@@ -1,0 +1,13 @@
+
+mode: online
+
+dataset_metadata_cls_path: "metadata.numeric_seq_metadata.NumericSeqMetadata"
+
+dataset_metadata:
+  seq_len: 100
+  max_value: 64
+  min_len_seq: 2 
+
+online:
+  generator_cls_path: datasets.sort_generator.SortGenerator
+  generator: {}

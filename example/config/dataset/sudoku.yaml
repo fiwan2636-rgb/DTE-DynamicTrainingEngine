@@ -1,0 +1,13 @@
+mode: fixed
+
+dataset_metadata_cls_path: "metadata.sudoku_metadata.SudokuMetadata"
+
+dataset_metadata:
+  sudoku_size: 9
+
+
+fixed:
+  train_path: build_dataset/sudoku-extreme-1k-aug-1000/train/dataset.npy
+  eval_path: build_dataset/sudoku-extreme-1k-aug-1000/test/dataset.npy
+
+online: null
